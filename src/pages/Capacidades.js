@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import { View, Text, Button, Image, StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
     image: {
@@ -45,54 +45,44 @@ const styles = StyleSheet.create({
         width: "50%",
         height: "100%",
         alignSelf: "center",
-        backgroundColor: "gray",
-        paddingTop: 10,
-        
+        backgroundColor: "gray"
 
-        },
-    sub_main:{
-        width: "50%",
-        height: "100%",
-        alignSelf: "center",
-        backgroundColor: "gray",
-        paddingTop: 10,
-        flex: 1,   
-        margin: 150,
-
-    }
+        }
 
 
 })
 
-
-const Home = ({ navigation }) => {
+const Capacidades = ({ navigation }) => {
     return (
         <View
         style={styles.main}
         >
-            <Text
+            <image
+            style={styles.image}
+            source = {require('../../Images/Curriculo_image.jpg')}
+            />
+            <Text 
             style={styles.title}
-            >Curriculo de Felipe Chapinotti Cazetto</Text>
-            <View
-            style={styles.sub_main}
+            >Capacidades</Text>
+
+            <Text
+            style={styles.Contet}
             >
+                Tenho conhecimento básico de: Lua, JS, Python
+            </Text>
+            <text
+            style={styles.Contet}>
+                Tenho inglês Intermediário B2, Conhecimento básico de Japonês Self-Taught, 
+            </text>
+
             <Button 
-                title="Informações pessoais"
-                style={styles.btn_GoIn}
-                onPress={ () => navigation.navigate('Sobre') }
+                style={styles.btn_GoBack}
+                color={"red"}
+                title="Voltar"
+                onPress={ () => navigation.goBack() }
             />
-            <Button
-                title="Capacidades"
-                onPress={ () => navigation.navigate('Capacidades') }
-            />
-            <Button
-                title="Profissoes"
-                onPress={ () => navigation.navigate('Profissoes') }
-            />
-            </View>
         </View>
     );
 }
 
-export default Home;
-
+export default Capacidades;

@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Text, Button, Image, StyleSheet } from "react-native";
 
-
 const styles = StyleSheet.create({
     image: {
         width: 150,
@@ -53,8 +52,7 @@ const styles = StyleSheet.create({
 
 })
 
-
-const Sobre = ({ navigation }) => {
+const Profissoes = ({ navigation }) => {
     return (
         <View
         style={styles.main}
@@ -65,18 +63,30 @@ const Sobre = ({ navigation }) => {
             />
             <Text 
             style={styles.title}
-            >Sobre mim</Text>
+            >Cursos Feitos</Text>
 
             <Text
             style={styles.Contet}
             >
-                Sou um aluno do ETEC, que atualmente está cursando o 3º módulo do curso técnico de Desenvolvimento de sistemas.
+                Término do Ensino médio em 2020 no I.E
             </Text>
-            <Text
-            style={styles.Contet}
-            >
-                Gosto de pescar, tenho grandes objetivos, e sempre estou seguindo em frente, tentando aprender cada vez mais.
-            </Text>
+            <text
+            style={styles.Contet}>
+                 Curso técnico de Desenvolvimento de sistemas, (1200 Horas) (ETEC)
+            </text>
+            <text
+            style={styles.Contet}>
+                 Curso de Arduino, (6 dias) (ETEC)
+            </text>
+            <text
+            style={styles.title}>
+                 Experiências Profissionais
+            </text>
+            <text
+            style={styles.Contet}>
+                 Recepcionista na Auto-mecânica JOAT (7 meses)
+                 
+            </text>
             <Button 
                 style={styles.btn_GoBack}
                 color={"red"}
@@ -87,4 +97,4 @@ const Sobre = ({ navigation }) => {
     );
 }
 
-export default Sobre;
+export default Profissoes;
